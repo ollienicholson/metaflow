@@ -1,0 +1,5 @@
+# metaflow metadata & logs
+.metaflow
+
+# user settings
+.vscode
