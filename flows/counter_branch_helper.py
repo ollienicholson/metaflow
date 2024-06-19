@@ -1,6 +1,6 @@
 from metaflow import FlowSpec, step
 
-class CounterBranchFlow(FlowSpec):
+class CounterBranchHelperFlow(FlowSpec):
     
     @step
     def start(self):
@@ -10,16 +10,16 @@ class CounterBranchFlow(FlowSpec):
         
     @step
     def add_one(self):
-        '''first branch'''
-
-        self.count +=1
+        '''this is the first branch'''
+        self.increment = 1
+        self.count += self.increment
         self.next(self.join)
     
     @step
     def add_two(self):
-        '''second branch'''
-        self.count+= 2
-        self.cat = "cat"
+        '''this is the second branch'''
+        self.increment = 2
+        self.count += self.increment
         self.next(self.join)
     
     @step
@@ -29,20 +29,15 @@ class CounterBranchFlow(FlowSpec):
         print("count from add_one: ", inputs.add_one.count)
         print("count from add_two: ", inputs.add_two.count)
         
-        # accessing a different branch by index e.g. add_two by reassigning variable in join to inputs[n].variable:
-        # self.creature = inputs[0].creature
-        # self.cat = inputs[1].cat
-        
-        # if you have many artifacts to join, you can merge artifacts using the helper function merge_artifacts:
-        self.merge_artifacts(inputs)
+        # if upstream artifacts are not required, we can exclude them when we join the two branches:
+        self.merge_artifacts(inputs, exclude=['increment'])
         self.next(self.end)
         
     @step
     def end(self):
         print("The creature is: ", self.creature)
-        print("The max count is: ", self.count)
-        print("The animal is a: ", self.cat)
+        print("The final count is: ", self.count)
         
 if __name__ == '__main__':
-    CounterBranchFlow()
+    CounterBranchHelperFlow()
         
