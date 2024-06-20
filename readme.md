@@ -1,9 +1,15 @@
-Using Metaflow as the infra framework, this repo includes:
+# Metaflow Infrastructure Framework
 
-key DS infra concepts in action
+This repository uses Metaflow as the infrastructure framework and includes the following components:
 
-basic flows
+## Data Science Infrastructure Concepts
+- Implementation of essential data science & ML infrastructure concepts in practice.
 
-advanced flows
+## Basic Flows
+- Examples of basic data science workflows using Metaflow.
 
-data science projects
+## Advanced Flows
+- Demonstrations of more complex and advanced workflows with Metaflow.
+
+## Data Science Projects
+- Various data science projects showcasing the integration of Metaflow with various tools and techniques.
