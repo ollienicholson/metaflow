@@ -62,3 +62,5 @@ if __name__ == '__main__':
 
 # run the following:
 # python3 classifier_predict.py run --vector '[14.3, 1.92, 2.72, 20.0, 120.0, 2.8, 3.14, 0.33, 1.97, 6.2, 1.07, 2.65, 1280.0]'
+
+# Output should be: 'Predicted class 0'
