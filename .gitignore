@@ -6,3 +6,7 @@
 
 # help
 help.txt
+
+# test data
+wine_data.csv
+data.json
