@@ -1,7 +1,7 @@
 from metaflow import FlowSpec, step
 
 
-class ClassifierTrainFlow(FlowSpec):
+class ClassifierTrainFlow_v1(FlowSpec):
 
     @step
     def start(self):
@@ -27,4 +27,4 @@ class ClassifierTrainFlow(FlowSpec):
 
 
 if __name__ == '__main__':
-    ClassifierTrainFlow()
+    ClassifierTrainFlow_v1()
