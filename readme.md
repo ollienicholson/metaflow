@@ -1,4 +1,4 @@
-# Metaflow Infrastructure Framework
+# Metaflow DS Infrastructure Framework
 
 This repository uses Metaflow as the infrastructure framework and includes the following components:
 
