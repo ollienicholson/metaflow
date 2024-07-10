@@ -9,7 +9,9 @@ This repository uses Metaflow as the infrastructure framework and includes the f
 - Examples of basic data science workflows using Metaflow.
 
 ## Advanced Flows
+- WIP
 - Demonstrations of more complex and advanced workflows with Metaflow.
 
 ## Data Science Projects
+- TODO
 - Various data science projects showcasing the integration of Metaflow with various tools and techniques.
